@@ -67,7 +67,7 @@
 					<div>We're <span>Expecting</span>!</div>
 				</section>
 				<section id="sex" class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
-					<div><span id="boy">Boy</span> or <span id="girl">Girl</span>?</div>
+					<div><span id="boy">Find out sex?</div>
 				</section>
 			</div>
 			<img src="img/ultrasound-baby.jpg" />
@@ -96,64 +96,67 @@
 			$('#sex').click(function() {
 				click += 1
 
+				// first confirmation taunt
 				if (click === 1) {
-					// first confirmation taunt
+
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
 			            $('#sex div').html('Are you sure?');
 			        }, 1000); // change the HTML after 1 second
 				}
-
 				
-					// second confirmation taunt
+				// second confirmation taunt
+				if (click === 2){
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
+					clearTimeout(timeout);
+					var timeout = setTimeout(function() {
+			            $('#sex div').html('Really sure?');
+			        }, 1000); // change the HTML after 1 second
+		        };
 
-						if (click === 2){
-							$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
-							clearTimeout(timeout);
-							var timeout = setTimeout(function() {
-					            $('#sex div').html('<em>Really</em> sure?');
-					        }, 1000); // change the HTML after 1 second
-				        };
-
-				
-
-				
-					// third confirmation taunt
-						if (click === 3){
-						$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
-						clearTimeout(timeout);
-						var timeout = setTimeout(function() {
-				            $('#sex div').html("Can't go back");
-				        }, 1000); // change the HTML after 1 second
+				// third confirmation taunt
+				if (click === 3){
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
+					clearTimeout(timeout);
+					var timeout = setTimeout(function() {
+			            $('#sex div').html("Totally sure?");
+			        }, 1000); // change the HTML after 1 second
 				};
 
+				if (click === 4){
+					// final taunt
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(500)
+					clearTimeout(timeout);
+					var timeout = setTimeout(function() {
+			            $('#sex div').html("okay, It's a...");
+			            $('#sex').css( "border", "none" );
+			        }, 1000); // change the HTML after 1 second
 
-				// $(this).css( "border", "none" );
+					// initiate color wheel
+					clearTimeout(timer);
+					var timer = setTimeout(function() {
+			            $('#sex div').fadeOut(1000);
+			            $('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 6000, function(){
+							$('#sex div').fadeIn().html("Girl!");
+							$('#sex').animate({ backgroundColor: '#00C8C8'}, 2000, function(){
+								$('#sex div').fadeIn().html("Boy!")
+								$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 2000, function(){
+									$('#sex div').html("Girl!")
+									$('#sex').animate({ backgroundColor: '#00C8C8'}, 2000, function(){
+										$('#sex div').html("Boy!")
+										$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 2000, function(){
+											$('#sex div').html("Really, a girl!");
+											event.stopImmediatePropagation();
+										}).delay(1000);
+									}).delay(1000);
+								}).delay(1000);
+							}).delay(1000);
+						}).delay(2000);
+			        }, 2000); // change the HTML after 2 seconds
+				}; //end of fourth click
 
-
-				// $(this).animate({ backgroundColor: 'rgba(245, 51, 204, 1)'}, 4000, function(){
-				// 	$('#sex div').html("Girl!");
-				// 	$(this).animate({ backgroundColor: 'rgba(0, 153, 153, 1)'}, 4000, function(){
-				// 		$('#sex div').html("Boy!")
-				// 		$(this).animate({ backgroundColor: 'rgba(245, 51, 204, 1)'}, 2000, function(){
-				// 			$('#sex div').html("Girl!")
-				// 			$(this).animate({ backgroundColor: 'rgba(0, 153, 153, 1)'}, 2000, function(){
-				// 				$('#sex div').html("Boy!")
-				// 				$(this).animate({ backgroundColor: 'rgba(245, 51, 204, 1)'}, 2000, function(){
-				// 					$('#sex div').html("It's a girl!");
-				// 									event.stopImmediatePropagation();
-				// 				}).delay(1000);
-				// 			}).delay(1000);
-				// 		}).delay(1000);
-				// 	}).delay(1000);
-
-
-				// }).delay(2000);
-				
-
-
-			});
+			}); //end of animation
 
 			// makes scrolling links tansition smoothly; see http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
 			$('a[href^="#"]').on('click',function (e) {
