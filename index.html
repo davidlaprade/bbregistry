@@ -3,9 +3,6 @@
 	<head>
 		<title>We're Expecting!</title>
 
-		<!-- custom CSS -->
-		<link type="text/css" rel="stylesheet" href="index.css" />
-
 		<!-- to add animations, see http://daneden.github.io/animate.css/ -->
 		<link rel="stylesheet" href="css/animate.css">
 
@@ -16,6 +13,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
+
 		<!-- to add the jQuery library, this MUST be included before the bootstrap JS file, else the navbar won't expand -->
 		<script src="js/jquery.js"></script>
 		<!-- Latest compiled and minified JavaScript for bootstrap -->
@@ -24,12 +22,15 @@
 		<!-- to add WOW animations -->
 		<script src="js/wow.min.js"></script>
 
+		<!-- custom CSS -->
+		<link type="text/css" rel="stylesheet" href="index.css" />
+
 	</head>
 
 	<body>
 			
 		<!-- navigation bar -->
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top black" role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -45,7 +46,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li class="active"><a href="#">Link</a></li>
+		        <li><a href="#">Link</a></li>
 		        <li><a href="#">Link</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -75,7 +76,9 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-		<img src="http://dbabyworld.files.wordpress.com/2014/07/ultrasound-baby.jpg" />
+		<div class="container-fluid" id="ultrasound">
+			<img src="http://dbabyworld.files.wordpress.com/2014/07/ultrasound-baby.jpg" />
+		</div>
 
 
 	</body>
