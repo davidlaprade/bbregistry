@@ -1,0 +1,31 @@
+* {
+	/*border: 2px dashed yellow;*/
+}
+
+body {
+	height: 200vh;
+	max-width: 100vw;
+	overflow: hidden;
+	background-color: black;
+}
+
+img {
+	margin: 0vh 0 0 -10vw;
+
+	width: 120vw;
+	-webkit-filter: brightness(15%);
+	-webkit-filter: blur(20px);
+
+}
+
+
+/*768px is the width of screens that bootstrap classifies as xs*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*990px is the width of screens that bootstrap classifies as md*/
+/*see https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries*/
+@media screen and (max-width: 990px) { 
+
+}
