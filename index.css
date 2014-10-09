@@ -59,7 +59,7 @@ img {
     font-size: 20px;
     font-size: 3vw;
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     color: #fff;
     border: 2px solid #009999;
@@ -69,7 +69,7 @@ img {
     border: none;
     background: rgba(0, 153, 153, 0.5);
     /*background: rgba(36, 39, 44, 0.5);*/
-    color: white;
+    color: black;
 }
 #sex div {
     position: absolute;

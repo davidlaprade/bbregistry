@@ -84,6 +84,17 @@
 		<script>
 		var height = $('#sex').width();
 		$('#sex').css("height", height);
+		$('#sex').scroll(function(){
+			var height = $('#sex').width();
+			css("height", height);
+		});
+		
+		$('#sex').click(function() {
+			$(this).animate({ background: 'rgb(245, 51, 204)'}, 200);
+
+
+		});
+
 
 		  // To add WOW animations
 		  new WOW().init();
