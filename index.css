@@ -33,7 +33,7 @@ body {
     letter-spacing: 4px;
     color: #fff;
 }
-#ultrasound div span {
+#header div span {
     color: #009999;
     font-weight: 800;
     letter-spacing: 2px;
@@ -78,6 +78,7 @@ img {
     width: 80%;
     left: 10%;
 }
+
 
 
 
@@ -209,3 +210,4 @@ img {
     background-image: none;
     background-color: black;
 }
+

@@ -66,7 +66,7 @@
 					<div>We're <span>Expecting</span>!</div>
 				</section>
 				<section id="sex" class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
-					<div >Boy or Girl?</div>
+					<div>Boy or Girl?</div>
 				</section>
 			</div>
 			<img src="img/ultrasound-baby.jpg" />
@@ -82,23 +82,37 @@
 
 
 		<script>
-		var height = $('#sex').width();
-		$('#sex').css("height", height);
-		$('#sex').scroll(function(){
+		$(document).ready(function(){
 			var height = $('#sex').width();
-			css("height", height);
-		});
-		
-		$('#sex').click(function() {
-			$(this).animate({ background: 'rgb(245, 51, 204)'}, 200);
+			$('#sex').css("height", height);
+			$('#sex').scroll(function(){
+				var height = $('#sex').width();
+				css("height", height);
+			});
+			
+			$('#sex').click(function() {
+				$(this).animate({ background: 'rgb(245, 51, 204)'}, 200);
 
 
-		});
+			});
 
+			// makes scrolling links tansition smoothly
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash,
+			    $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 900, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
 
 		  // To add WOW animations
 		  new WOW().init();
-
+		});
 		</script>
 
 
