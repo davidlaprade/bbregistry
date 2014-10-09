@@ -1,5 +1,5 @@
 * {
-	border: 2px dashed yellow;
+	/*border: 2px dashed yellow;*/
 }
 
 body {
@@ -19,20 +19,30 @@ body {
 }
 
 #ultrasound div {
-	border: 2px solid yellow;
-	text-align: center;
+    width: 100%;
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    margin: 60px 0 0 -10px;
+    margin: 10vh 0 0 -10px;
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 4px;
+    color: #fff;
 }
 
-#ultrasound h1 {
-
-	display: inline-block;
-	margin: 0;
-	position: absolute;
-	z-index: 1;
+#ultrasound div span {
+    color: #009999;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 img {
-	position: absolute;
+    position: absolute;
 	z-index: 0;
 	margin: -20px -30px 0 -20px;
 	margin: -10vh -10vw 0 -10vw;
@@ -61,13 +71,19 @@ img {
 		margin: 50px 0 0 0;
 		margin: 20vh 0 0 0;
 	} /*end ultrasound bagkround */
-
+    #ultrasound div {
+        margin: 30px 0 0 -10px;
+        margin: 5vh 0 0 -10px;
+        font-size: 50px;
+        font-size: 8vw;
+        letter-spacing: 1px;
+    }
 }
 
 
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: Helvetica,Arial,cursive;
     color: #009999;
 }
 
@@ -98,7 +114,7 @@ img {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
