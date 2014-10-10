@@ -80,13 +80,11 @@ body {
     width: 80%;
     left: 10%;
 }
-
 #btn-container {
     width: 100vw;
     position: absolute;
     margin-top: 20%;
     margin-top: 35vh;
-    border: 2px solid yellow;
     top: 200%;
     top: 200vh;
     z-index: 1;
@@ -95,55 +93,10 @@ body {
 
 
 
-/*768px is the width of screens that bootstrap classifies as xs*/
-@media screen and (max-width: 768px) {
 
-    /*ensures that the registry, puppy, and FAQ's buttons remain centered*/
-    .view {
-        margin-left: 0;
-        margin-bottom: 20%;
-        margin-bottom: 20vh;
 
-    }
 
-}
 
-/*990px is the width of screens that bootstrap classifies as md*/
-/*see https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries*/
-@media screen and (max-width: 990px) { 
-
-	/*for the ultrasound background*/
-	#ultrasound-pic {
-		margin: -20px -30px -20px -40px;
-		-webkit-filter: blur(5px);
-	}
-	#ultrasound {
-		margin: 50px 0 0 0;
-		margin: 20vh 0 0 0;
-	} /*end ultrasound bagkround */
-    #header {
-        margin: 30px 0 0 0;
-        margin: 5vh 0 0 0;
-        font-size: 50px;
-        font-size: 8vw;
-        letter-spacing: 1px;
-    }
-
-    /*for the boy or girl button*/
-    #sex {
-        font-size: 50px;
-        font-size: 6vw;
-        letter-spacing: 1px;
-    }
-
-    /*ensures that the registry, puppy, and FAQ's buttons remain centered*/
-    .view {
-        margin-left: 0;
-        margin-bottom: 20%;
-        margin-bottom: 20vh;
-
-    }
-}
 
 /*/////////////////////Gabe's navbar code////////////////////////////////////////*/
 
@@ -242,64 +195,78 @@ body {
 
 /*///////////end Gabe's navbar code///////////////////////////////////////////////////*/
 
+
+
+
+/*///////////BEGIN ZOOM-IN BUTTON CODE////////////////////////////////////////////////*/
 .view {
     margin-left: 6.25%;
     margin-left: 6.25vw;
-
     overflow: hidden;
-    position: relative;
+
     text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
     cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
+    border-radius: 10px;
+    border: 2px solid rgb(0,153,153);
 }
 .view .mask, .view .content {
+    width: 100%;
+    height: 100%;
     position: absolute;
     overflow: hidden;
     top: 0;
-    left: 0
+    left: 0;
 }
 .view img {
+    margin-left: -20px;
+    padding: 0;
     height: 100%;
     display: block;
     position: relative
 }
 .view h2 {
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 17px;
+    font-size: 20px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
     margin: 20px 0 0 0
 }
 .view p {
-    font-family: Georgia, serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
-    font-size: 12px;
+    font-size: 20px;
     position: relative;
     color: #fff;
     padding: 10px 20px 20px;
     text-align: center
 }
 .view a.info {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
     display: inline-block;
     text-decoration: none;
     padding: 7px 14px;
-    background: #000;
+    background: rgba(0,0,0,0.8);
     color: #fff;
-    box-shadow: 0 0 1px #000
+    border-radius: 5px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    bottom: 5%;
 }
 .view a.info:hover {
-    box-shadow: 0 0 5px #000
+    background: black;
 }
 .view-first img { 
     transition: all 0.2s linear;
 }
 .view-first .mask {
     opacity: 0;
-    background-color: rgba(219,127,8, 0.7); 
+    background-color: rgba(0,153,153, 0.7);
     transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
@@ -332,5 +299,63 @@ body {
     transition-delay: 0.1s;
 }
 .view-first:hover a.info {
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
+}
+/*////////////////END ZOOM IN BUTTON CODE///////////////////////////*/
+
+
+
+/*990px is the width of screens that bootstrap classifies as md*/
+/*see https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries*/
+@media screen and (max-width: 990px) { 
+
+    /*for the ultrasound background*/
+    #ultrasound-pic {
+        margin: -20px -30px -20px -40px;
+        -webkit-filter: blur(5px);
+    }
+    #ultrasound {
+        margin: 50px 0 0 0;
+        margin: 20vh 0 0 0;
+    } /*end ultrasound bagkround */
+    #header {
+        margin: 30px 0 0 0;
+        margin: 5vh 0 0 0;
+        font-size: 50px;
+        font-size: 8vw;
+        letter-spacing: 1px;
+    }
+
+    /*for the boy or girl button*/
+    #sex {
+        font-size: 50px;
+        font-size: 6vw;
+        letter-spacing: 1px;
+    }
+
+    /*ensures that the registry, puppy, and FAQ's buttons remain centered*/
+    .view {
+        margin-bottom: 20%;
+        margin-bottom: 20vh;
+    }
+    /* fixes font in registry, puppy, FAQ's*/
+    .view p {
+        font-size: 10px;
+    }
+}
+
+/*768px is the width of screens that bootstrap classifies as xs*/
+@media screen and (max-width: 768px) {
+
+    /*ensures that the registry, puppy, and FAQ's buttons remain centered*/
+    .view {
+        margin-bottom: 20%;
+        margin-bottom: 20vh;
+    }
+    /* fixes font in registry, puppy, FAQ's*/
+    .view p {
+        font-size: 10px;
+    }
+
+
 }
