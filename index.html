@@ -132,7 +132,9 @@
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
-			            $('#sex div').html('Are you sure?');
+						$('#sex div').css('line-height','normal');
+						$('#sex div').css('top','35%');
+			            $('#sex div').html('Want to know?');
 			        }, 1000); // change the HTML after 1 second
 				}
 				
@@ -141,7 +143,9 @@
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
-			            $('#sex div').html('Really sure?');
+						$('#sex div').css('top','45%');
+						$('#sex div').css('line-height','20%');
+			            $('#sex div').html('Are you sure?');
 			        }, 1000); // change the HTML after 1 second
 		        };
 
@@ -150,7 +154,9 @@
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
-			            $('#sex div').html("Totally sure?");
+						$('#sex div').css('top','35%');
+						$('#sex div').css('line-height','normal');
+			            $('#sex div').html("It'll ruin the surprise");
 			        }, 1000); // change the HTML after 1 second
 				};
 
@@ -159,6 +165,8 @@
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(500)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
+						$('#sex div').css('line-height','20%');
+						$('#sex div').css('top','45%');
 			            $('#sex div').html("okay, It's a...");
 			            $('#sex').css( "border", "none" );
 			        }, 1000); // change the HTML after 1 second
@@ -168,22 +176,22 @@
 					var timer = setTimeout(function() {
 			            $('#sex div').fadeOut(1000);
 			            $('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 6000, function(){
-							$('#sex div').fadeIn().html("Girl!");
+
 							$('#sex').animate({ backgroundColor: '#00C8C8'}, 2000, function(){
-								$('#sex div').fadeIn().html("No, a Boy!")
-								$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 2000, function(){
-									$('#sex div').html("No, a Girl!")
-									$('#sex').animate({ backgroundColor: '#00C8C8'}, 2000, function(){
-										$('#sex div').html("No, a Boy!")
-										$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 2000, function(){
-											$('#sex div').html("Really, a girl!");
+
+								$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 1000, function(){
+	
+									$('#sex').animate({ backgroundColor: '#00C8C8'}, 1000, function(){
+
+										$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 1000, function(){
+											$('#sex div').fadeIn().html("Girl!");
 											event.stopImmediatePropagation();
 										}).delay(1000);
 									}).delay(1000);
 								}).delay(1000);
 							}).delay(1000);
-						}).delay(2000);
-			        }, 2000); // change the HTML after 2 seconds
+						}).delay(1000);
+			        }, 1000); // change the HTML after 2 seconds
 				}; //end of fourth click
 
 			}); //end of animation
