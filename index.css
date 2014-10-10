@@ -16,7 +16,10 @@ body {
 	background-color: black;
 	color: white;
 }
-
+#top-of-page {
+    position: absolute;
+    top: 0%;
+}
 #header {
     width: 100%;
     width: 100vw;
@@ -48,11 +51,13 @@ body {
 	-webkit-filter: brightness(15%);
 	-webkit-filter: blur(20px);
 }
-
+#sex-page-marker {
+    position: absolute;
+    top: 80%;
+    top: 80vh;
+}
 
 #sex {
-    margin-top: 20%;
-    margin-top: 35vh;
     top: 100%;
     top: 100vh;
     text-align: center;
