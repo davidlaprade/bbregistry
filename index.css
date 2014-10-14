@@ -223,6 +223,7 @@ body {
     left: 0;
 }
 .view img {
+
     margin-left: -20px;
     padding: 0;
     height: 100%;
@@ -304,6 +305,28 @@ body {
     transition-delay: 0.1s;
 }
 .view-first:hover a.info {
+    transition-delay: 0.1s;
+}
+.registry-icon img {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    border-radius: 5px;
+    bottom: 10%;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+.icon-1 img {
+    margin-left: 0;
+    left: 20%;
+}
+.icon-2 img {
+    right: 20%;
+}
+.registry-icon img:hover {
+    opacity: 1;
     transition-delay: 0.1s;
 }
 /*////////////////END ZOOM IN BUTTON CODE///////////////////////////*/
