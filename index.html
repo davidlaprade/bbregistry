@@ -100,10 +100,10 @@
 				     </div>  
 				</div>
 			</div>
-			<section id="faq-content-marker"></section>
+<!-- 			<section id="faq-content-marker"></section>
 				<section id="faq-content" class="col-xs-10 col-xs-offset-1">
 					<div><strong>Q1:</strong> <em>Are you excited?</em><br/><strong>A1:</strong> Yes.</div>
-				</section>
+				</section> -->
 			<img id="ultrasound-pic" src="img/ultrasound-baby.jpg" />
 		</div>
 
@@ -155,7 +155,7 @@
 
 				// third confirmation taunt
 				if (click === 3){
-					$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
 						$('#sex div').css('top','35%');
@@ -167,7 +167,7 @@
 
 				// fourth confirmation taunt
 				if (click === 4){
-					$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
 						$('#sex div').css('top','30%');
@@ -193,16 +193,13 @@
 			            $('#sex div').fadeOut(1000);
 			            $('#sex').animate({ backgroundColor: '#F4A0C2'}, 6000, function(){
 
-							$('#sex').animate({ backgroundColor: '#A4D3FA'}, 2000, function(){
+							$('#sex').animate({ backgroundColor: '#A4D3FA'}, 3000, function(){
 
-								$('#sex').animate({ backgroundColor: '#F4A0C2'}, 1000, function(){
+								$('#sex').animate({ backgroundColor: '#F4A0C2'}, 3000, function(){
 	
 									$('#sex').animate({ backgroundColor: '#A4D3FA'}, 1000, function(){
-
-										$('#sex').animate({ backgroundColor: '#F4A0C2'}, 1000, function(){
-											$('#sex div').fadeIn().html("Girl!");
+											$('#sex div').fadeIn().html("Boy!");
 											event.stopImmediatePropagation();
-										}).delay(1000);
 									}).delay(1000);
 								}).delay(1000);
 							}).delay(1000);

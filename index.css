@@ -3,7 +3,8 @@
 }
 
 body {
-	height: 400vh;
+    height: 300%;
+	height: 300vh;
 	max-width: 100vw;
 	overflow: hidden;
 	background-color: black;
@@ -48,8 +49,14 @@ body {
 	margin: -10vh -10vw 0 -10vw;
 	width: 130%;
 	width: 120vw;
-	-webkit-filter: brightness(15%);
-	-webkit-filter: blur(20px);
+
+    /*http://demosthenes.info/blog/534/Cross-browser-Image-Blur-with-CSS*/
+    -webkit-filter: blur(20px); 
+    -moz-filter: blur(20px); 
+    -o-filter: blur(20px); 
+    -ms-filter: blur(20px); 
+    filter: url(blur.svg#blur);
+
 }
 #sex-page-marker {
     position: absolute;
