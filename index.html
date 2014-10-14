@@ -79,8 +79,8 @@
 				     <div class="mask">  
 					     <h2>Registry</h2>  
 					     <p>Bless our family with a gift for our little baby!</p>  
-				         <a href="#" class="registry-icon icon-1"><img src="img/target_icon.jpg"/></a>  
-				         <a href="#" class="registry-icon icon-2"><img src="img/amazon-icon.png"/></a>  
+				         <a href="https://www-secure.target.com/gift-registry/registry/WBfwotO4xcyveuf3MugLng" target="_newtab" class="registry-icon icon-1"><img src="img/target_icon.jpg"/></a>  
+				         <a href="http://www.amazon.com/registry/baby/B4OKUGYK819A" target="_newtab" class="registry-icon icon-2"><img src="img/amazon-icon.png"/></a>  
 				     </div>  
 				</div>
 				<div id="faqs" class="view view-first col-xs-offset-1 col-xs-10 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 resize">  
@@ -161,7 +161,19 @@
 			        }, 1000); // change the HTML after 1 second
 				};
 
+
+				// fourth confirmation taunt
 				if (click === 4){
+					$('#sex div').fadeOut(1000).delay(500).fadeIn(100)
+					clearTimeout(timeout);
+					var timeout = setTimeout(function() {
+						$('#sex div').css('top','30%');
+						$('#sex div').css('line-height','normal');
+			            $('#sex div').html("Like opening a gift before Christmas");
+			        }, 1000); // change the HTML after 1 second
+				};
+
+				if (click === 5){
 					// final taunt
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(500)
 					clearTimeout(timeout);
@@ -176,15 +188,15 @@
 					clearTimeout(timer);
 					var timer = setTimeout(function() {
 			            $('#sex div').fadeOut(1000);
-			            $('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 6000, function(){
+			            $('#sex').animate({ backgroundColor: '#F4A0C2'}, 6000, function(){
 
-							$('#sex').animate({ backgroundColor: '#00C8C8'}, 2000, function(){
+							$('#sex').animate({ backgroundColor: '#A4D3FA'}, 2000, function(){
 
-								$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 1000, function(){
+								$('#sex').animate({ backgroundColor: '#F4A0C2'}, 1000, function(){
 	
-									$('#sex').animate({ backgroundColor: '#00C8C8'}, 1000, function(){
+									$('#sex').animate({ backgroundColor: '#A4D3FA'}, 1000, function(){
 
-										$('#sex').animate({ backgroundColor: 'rgb(245, 51, 204)'}, 1000, function(){
+										$('#sex').animate({ backgroundColor: '#F4A0C2'}, 1000, function(){
 											$('#sex div').fadeIn().html("Girl!");
 											event.stopImmediatePropagation();
 										}).delay(1000);
