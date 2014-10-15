@@ -49,21 +49,18 @@ body {
 	margin: -10vh -10vw 0 -10vw;
 	width: 130%;
 	width: 120vw;
-
     /*http://demosthenes.info/blog/534/Cross-browser-Image-Blur-with-CSS*/
     -webkit-filter: blur(20px); 
     -moz-filter: blur(20px); 
     -o-filter: blur(20px); 
     -ms-filter: blur(20px); 
     filter: url(blur.svg#blur);
-
 }
 #sex-page-marker {
     position: absolute;
     top: 80%;
     top: 80vh;
 }
-
 #sex {
     top: 100%;
     top: 100vh;
@@ -104,19 +101,20 @@ body {
 
 #faq-content-marker {
     position: absolute;
-    top: 400%;
-    top: 400vh;
+    top: 100%;
+    top: 100vh; /*That's 200vh from the top of the btn-container*/
 }
 
 #faq-content {
     color: white;
-    height: 20vh;
+    height: 50%;
+    height: 50vh;
     display: none;
-    top: 300%;
-    top: 300vh;
+    top: 125%;
+    top: 125vh;
     text-align: left;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     font-size: 20px;
     font-size: 3vw;
     text-transform: uppercase;
@@ -126,6 +124,7 @@ body {
     border: 2px solid #009999;
     border-radius: 10px;
 }
+
 
 
 
