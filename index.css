@@ -124,7 +124,8 @@ body {
 
 #faq-content .question {
     font-family: 'Lato', sans-serif;
-        text-transform: none;
+    text-transform: none;
+    line-height: 2px;
     font-size: 20px;
     font-size: 3vw;
     letter-spacing: 1px;
@@ -144,12 +145,29 @@ body {
 /*left-aligns the questions in the FAQs section*/
 #left-align {
     text-align: left;
-    padding: 0 10px 0 10px;
+    padding: 20px 10px 0 10px;
 }
 
+#close-button {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    right: 1%;
+}
+#close-button img {
+    width: 50px;
+}
 
-
-
+.question:hover {
+    -webkit-transition:text-shadow 0.5s ease-in-out;
+    -moz-transition:text-shadow 0.5s ease-in-out;
+    -o-transition:text-shadow 0.5s ease-in-out;
+    -ms-transition:text-shadow 0.5s ease-in-out;
+    transition:text-shadow 0.5s ease-in-out;    
+    
+    text-shadow:0px 2px 4px #009999;   
+}
 
 
 
@@ -433,6 +451,10 @@ body {
     /* fixes font in registry, puppy, FAQ's*/
     .view p {
         font-size: 10px;
+    }
+    #close-button img {
+        width: 20px;
+        top: 1%;
     }
 
 
