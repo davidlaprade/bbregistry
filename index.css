@@ -101,30 +101,51 @@ body {
 
 #faq-content-marker {
     position: absolute;
-    top: 100%;
-    top: 100vh; /*That's 200vh from the top of the btn-container*/
+    /*the property "top" is not specified here because it is being taken care of by jQuery*/
 }
 
 #faq-content {
-    color: white;
-    height: 50%;
-    height: 50vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: none;
-    top: 125%;
-    top: 125vh;
+    /*the property "top" is not specified here because it is being taken care of by jQuery*/
     text-align: left;
     position: absolute;
     z-index: 2;
-    font-size: 20px;
-    font-size: 3vw;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-    color: #fff;
+    color: #009999;
+    font-size: 40px;
+    font-size: 4vw;
     border: 2px solid #009999;
     border-radius: 10px;
 }
 
+#faq-content .question {
+    font-family: 'Lato', sans-serif;
+        text-transform: none;
+    font-size: 20px;
+    font-size: 3vw;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+#faq-content .answer {
+    font-family: 'Lato', sans-serif;
+    padding-left: 20px;
+    color: gray;
+    font-size: 20px;
+    font-size: 3vw;
+    text-transform: none;
+    display: none;
+}
+
+/*left-aligns the questions in the FAQs section*/
+#left-align {
+    text-align: left;
+    padding: 0 10px 0 10px;
+}
 
 
 

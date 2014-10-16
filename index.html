@@ -23,8 +23,6 @@
 		<script src="js/jquery.js"></script>
 		<!-- Latest compiled and minified JavaScript for bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- to add WOW animations -->
-		<script src="js/wow.min.js"></script>
 		<!-- to add color animations -->
 		<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 
@@ -102,20 +100,37 @@
 
 				<section id="faq-content-marker"></section>
 				<div id="faq-content" class="col-xs-12">
-						<p class="question">Are you excited?</p>
-						<p class="answer">Yes. Very!</p>
-						<p class="question">are you going to find out if it's a boy or girl?</p>
-						<p class="answer">we already did! Click the button above to find out.</p>
-						<p class="question">how does helene feel?</p>
-						<p class="answer">pregnant</p>
-						<p class="question">do you have names picked out?</p>
-						<p class="answer">yes, but we welcome suggestions.</p>
-						<p class="question">are you really getting rid of your dog?</p>
-						<p class="answer">no. that was just a bad joke</p>
-						<p class="question">how are you going to fit that baby in your 200sq foot house?</p>
-						<p class="answer">duct tape. and lots of it</p>
-						<p class="question">what is your due date?</p>
-						<p class="answer">March 10th</p>
+						Frequently Asked Questions
+						<span id="left-align">
+							<p>
+								<span class="question">Are you excited?</span><br/>
+								<span class="answer">Yes. Very!</span>
+							</p>
+							<p>
+								<span class="question">Are you going to find out if it's a boy or girl?</span><br/>
+								<span class="answer">We already did! Click the button above to find out.</span>
+							</p>
+							<p>
+								<span class="question">How does Helene feel?</span><br/>
+								<span class="answer">Pregnant. But she's a trooper.</span>
+							</p>
+							<p>
+								<span class="question">Do you have names picked out?</span><br/>
+								<span class="answer">Yes, but we welcome suggestions below.</span>
+							</p>
+							<p>
+								<span class="question">Are you really getting rid of your dog?</span><br/>
+								<span class="answer">No. That was just a bad joke!</span>
+							</p>
+							<p>
+								<span class="question">How are you going to fit that baby in your 200sq foot house?</span><br/>
+								<span class="answer">Duct tape. And a lot of McGivering.</span>
+							</p>
+							<p>
+								<span class="question">What is your due date?</span><br/>
+								<span class="answer">March 10th</span>
+							</p>
+						</span>
 				</div>
 			</div>
 			<img id="ultrasound-pic" src="img/ultrasound-baby.jpg" />
@@ -136,10 +151,31 @@
 
 			// make FAQs content appear
 			$('#faqs div a').click(function(){
-				$('#faq-content').fadeIn(1000);
+				var height = $('#puppy').position().top + 800;
+				$('#faq-content-marker').css("top",(height-100));
+				$('#faq-content').fadeIn(1000).css("top",height);
 				$('#faq-menu-link').attr('href','#faq-content-marker');
 			});
 			
+			// animate color transition on hover over questions
+			$('.question').hover(
+				function() {
+					$(this).animate( {color: '#fec503'}, 200);
+				},
+				function() {
+					$(this).animate( {color: '#fff'}, 200);
+				}
+			);
+
+			// animate answer slide in on click
+			$('#faq-content p').click(function() {
+				$(this).find('.answer').fadeIn();
+				$(this).click(function(){
+					$(this).find('.answer').fadeOut();
+				});
+			});
+
+
 			// animate the sex reveal button
 			var click = 0
 			$('#sex').click(function() {
@@ -207,16 +243,9 @@
 					var timer = setTimeout(function() {
 			            $('#sex div').fadeOut(1000);
 			            $('#sex').animate({ backgroundColor: '#F4A0C2'}, 6000, function(){
-
 							$('#sex').animate({ backgroundColor: '#A4D3FA'}, 3000, function(){
-
-								$('#sex').animate({ backgroundColor: '#F4A0C2'}, 3000, function(){
-	
-									$('#sex').animate({ backgroundColor: '#A4D3FA'}, 1000, function(){
-											$('#sex div').fadeIn().html("Boy!");
-											event.stopImmediatePropagation();
-									}).delay(1000);
-								}).delay(1000);
+								$('#sex div').fadeIn().html("Boy!").css('color','black');
+								event.stopImmediatePropagation();
 							}).delay(1000);
 						}).delay(1000);
 			        }, 1000); // change the HTML after 2 seconds
@@ -238,8 +267,6 @@
 			    });
 			});
 
-		  // To add WOW animations
-		  new WOW().init();
 		});
 		</script>
 
