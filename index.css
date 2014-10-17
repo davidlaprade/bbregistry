@@ -3,7 +3,7 @@
 }
 
 body {
-    height: 300%;
+    height: 350%;
 	height: 300vh;
 	max-width: 100vw;
 	overflow: hidden;
@@ -166,7 +166,7 @@ body {
     -ms-transition:text-shadow 0.5s ease-in-out;
     transition:text-shadow 0.5s ease-in-out;    
     
-    text-shadow:0px 2px 4px #009999;   
+    text-shadow:0px 2px 6px #009999;   
 }
 
 

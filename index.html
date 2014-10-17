@@ -159,19 +159,19 @@
 			});
 			
 			// animate color transition on hover over questions
-			$('.question').hover(
-				function() {
-					$(this).animate( {color: '#E6F5F5'}, 200);
-				},
-				function() {
-					$(this).animate( {color: '#fff'}, 200);
-				}
-			);
+			// $('.question').hover(
+			// 	function() {
+			// 		$(this).animate( {color: '#009999'}, 200);
+			// 	},
+			// 	function() {
+			// 		$(this).animate( {color: '#fff'}, 200);
+			// 	}
+			// );
 
 			// animate answer slide in on click
 			$('#faq-content p').click(function() {
 				$(this).find('.answer').fadeIn();
-				$(this).click(function(){
+				$(this).mouseleave(function(){
 					$(this).find('.answer').fadeOut();
 				});
 			});
