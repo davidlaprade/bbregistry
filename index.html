@@ -216,29 +216,17 @@
 
 				// first confirmation taunt
 				if (click === 1) {
-
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
+						$('#sex div').css('top','30%');
 						$('#sex div').css('line-height','normal');
-						$('#sex div').css('top','35%');
-			            $('#sex div').html('Want to know?');
-			        }, 1000); // change the HTML after 1 second
-				}
-				
-				// second confirmation taunt
-				if (click === 2){
-					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
-					clearTimeout(timeout);
-					var timeout = setTimeout(function() {
-						$('#sex div').css('top','45%');
-						$('#sex div').css('line-height','20%');
-			            $('#sex div').html('Are you sure?');
+			            $('#sex div').html('Are you sure you want to know?');
 			        }, 1000); // change the HTML after 1 second
 		        };
 
 				// third confirmation taunt
-				if (click === 3){
+				if (click === 2){
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
@@ -250,7 +238,7 @@
 
 
 				// fourth confirmation taunt
-				if (click === 4){
+				if (click === 3){
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(1000)
 					clearTimeout(timeout);
 					var timeout = setTimeout(function() {
@@ -260,7 +248,7 @@
 			        }, 1000); // change the HTML after 1 second
 				};
 
-				if (click === 5){
+				if (click === 4){
 					// final taunt
 					$('#sex div').fadeOut(1000).delay(500).fadeIn(500)
 					clearTimeout(timeout);

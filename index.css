@@ -169,6 +169,8 @@ body {
     
     text-shadow:0px 2px 6px #009999;   
 }
+
+/*this ensures that the registry/puppy/faq buttons aren't stuck at the bottom of the screen*/
 #puppy {
     margin-bottom: 200px;
 }
