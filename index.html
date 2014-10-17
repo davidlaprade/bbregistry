@@ -159,14 +159,14 @@
 			});
 			
 			// animate color transition on hover over questions
-			// $('.question').hover(
-			// 	function() {
-			// 		$(this).animate( {color: '#009999'}, 200);
-			// 	},
-			// 	function() {
-			// 		$(this).animate( {color: '#fff'}, 200);
-			// 	}
-			// );
+				// $('.question').hover(
+				// 	function() {
+				// 		$(this).animate( {color: '#009999'}, 200);
+				// 	},
+				// 	function() {
+				// 		$(this).animate( {color: '#fff'}, 200);
+				// 	}
+				// );
 
 			// animate answer slide in on click
 			$('#faq-content p').click(function() {
@@ -198,6 +198,15 @@
 				$('#faq-content').fadeOut(1000);
 				$('#faq-menu-link').attr('href','#faqs');
 			});
+
+			$('.navbar-default .nav li a').hover(
+				function() {
+					$(this).animate({color: '#009999'}, 300);
+				},
+				function() {
+					$(this).animate({color: '#fff'}, 100)
+				}
+			);
 
 
 			// animate the sex reveal button

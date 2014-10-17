@@ -178,13 +178,6 @@ body {
     color: #009999;
 }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-    color: #fec503;
-}
-
 .navbar-default .navbar-collapse {
     border-color: rgba(255,255,255,.02);
 }
@@ -211,6 +204,7 @@ body {
     color: #fff;
 }
 
+/* eliminates bootstrap styling on hover */
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
