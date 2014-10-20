@@ -157,6 +157,16 @@
 				$('#faq-content').fadeIn(1000).css("top",height);
 				$('#faq-menu-link').attr('href','#faq-content-marker');
 			});
+
+			// make FAQ question/links more obvious
+			$('.question').hover(
+				function() {
+					$(this).animate({color: '#009999'}, 200);
+				},
+				function() {
+					$(this).animate({color: '#fff'}, 100)
+				}
+			);
 			
 			// animate color transition on hover over questions
 				// $('.question').hover(
